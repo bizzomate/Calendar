@@ -121,7 +121,7 @@ define([
         _getResources: function(entity, callback) {
             logger.debug(this.id + "._getResources");
             mx.data.get({
-                xpath: "//" + this.resourceEntity,
+                xpath: "//" + this.resourceEntity + this.resourceConstraint.replace(/\[%CurrentObject%\]/gi, this._mxObj.getGuid()),
                 callback: lang.hitch(this, function(objs) {
                     logger.debug(this.id + "._getResources callback:", objs ? objs.length + " objects" : "null");
                     if (callback) {

@@ -420,6 +420,11 @@
             <category>Scheduler</category>
             <description>The resource entity (used for Scheduler).</description>
         </property>
+        <property key="resourceConstraint" type="entityConstraint" entityProperty="resourceEntity" required="false">
+            <caption>XPath Constraint resource</caption>
+            <category>Scheduler</category>
+            <description>The XPath constraint on the objects.</description>
+        </property>
         <property key="resourceEventPath" type="entity" isPath="yes" pathType="reference" entityProperty="eventEntity">
             <caption>Resource reference</caption>
             <category>Scheduler</category>
